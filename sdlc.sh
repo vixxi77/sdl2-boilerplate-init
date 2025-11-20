@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+if [ -e "$1" ]; then
+	echo "The file with name '$1' already exists."
+	exit 1
+fi
+
 touch $1
 
 echo "/* This is SDL2 Initialization boiler plate
